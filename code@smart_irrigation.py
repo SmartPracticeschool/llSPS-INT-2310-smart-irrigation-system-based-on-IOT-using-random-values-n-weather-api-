@@ -57,7 +57,7 @@ while True:
     mois=random.randrange(20,60,2)
     print("moisture level of soil is:",mois)
     if(temperature>32 | mois<35):
-        req_sms=requests.get('https://www.fast2sms.com/dev/bulk?authorization=TPnud1eh5Bfyt2FpHoWXGwlC7NSsKYLmIz6MEvRi8a93jgAZbDDvuxwEg9eBdjmP7OLRpJ2MsIhoZ54a&sender_id=FSTSMS&message=temp%20high&language=english&route=p&numbers=7075001212,9121852344,')
+        req_sms=requests.get('https://www.fast2sms.com/dev/bulk?authorization=TPnud1eh5Bfyt2FpHoWXGwlC7NSsKYLmIz6MEvRi8a93jgAZbDDvuxwEg9eBdjmP7OLRpJ2MsIhoZ54a&sender_id=FSTSMS&message=Temperature,Moisture%20level%20of%20soil%20are%20improper&language=english&route=p&numbers=7075001212,9121852344')
     data = { 'Temperature' : temperature, 'Moisture': mois, 'Humidity': hum }
         #print (data)
     def myOnPublishCallback():
